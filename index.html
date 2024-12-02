@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <style>
     #carouselExampleIndicators {
-      height: 300px;
+      height: 400px;
     }
 
     #carouselExampleIndicators .carousel-inner,
@@ -23,18 +23,18 @@
 
     @media (min-width:992px) {
       #carouselExampleIndicators {
-        height: calc(100vh - 56px);
+        height: 100vh;
       }
     }
 
-    .container-fluid:nth-child(4) {
+    #position {
       height: 400px;
     }
 
     @media (min-width:992px) {
 
-      .container-fluid:nth-child(2),
-      .container-fluid:nth-child(4) {
+      #attractions,
+      #position {
         height: 100vh;
       }
     }
@@ -45,37 +45,37 @@
   </style>
 </head>
 
-<body>
-  <div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">泰山咖啡莊園</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">菜單餐點</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">周邊景點</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">莊園位置</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">聯絡我們</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">咖啡故事</a>
-            </li>
-          </ul>
-        </div>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="56">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">泰山咖啡莊園</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#menu">菜單餐點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#attractions">周邊景點</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#position">莊園位置</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#msgboard">聯絡我們</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#story">咖啡故事</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="menu" class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
@@ -105,7 +105,7 @@
     </div>
   </div>
 
-  <div class="container-fluid p-5">
+  <div id="attractions" class="container-fluid p-5">
     <div class="row h-100 justify-content-center align-items-center g-5">
       <div class="col-12 col-lg-3">
         <div class="card">
@@ -140,8 +140,8 @@
     </div>
   </div>
 
-  <div class="container-fluid p-0 border">
-    <div class="card mb-3 border-0">
+  <div id="story" class="container-fluid p-0 bg-light">
+    <div class="card border-0">
       <div class="row g-0">
         <div class="col-12 col-lg-6">
           <img src="https://picsum.photos/1600/1000/?random=7" class="img-fluid w-100">
@@ -171,11 +171,109 @@
     </div>
   </div>
 
-  <div class="container-fluid p-0">
+  <div id="position" class="container-fluid p-0">
     <iframe class="w-100 h-100"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703506716216!2d121.41694067595638!3d25.044134137882367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1733128253766!5m2!1szh-TW!2stw"
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <div id="msgboard" class="container-fluid p-0 vh-100 bg-light">
+    <div class="row flex-column h-100 justify-content-center align-items-center mx-0">
+      <div class="col-11 col-lg-8 text-center mb-3">
+        <h1>聯絡我們</h1>
+        <h3>泰山咖啡莊園，傳承熱情coding精神</h3>
+        <p>任何服務問題或建議，歡迎您透過訂閱客服表單告知我們，謝謝!</p>
+      </div>
+      <div class="col-11 col-lg-8">
+        <form class="row g-3">
+          <div class="col-lg-6">
+            <label for="input1" class="form-label">姓名</label>
+            <div class="input-group">
+              <input type="email" class="form-control" id="input1">
+              <span class="input-group-text ps-3 pe-0 bg-light" id="basic-addon2">
+                <div class="form-check form-check-inline me-3 p-0">
+                  <label class="form-check-label" for="inlineRadio1">先生</label>
+                  <input class="form-check-input float-none ms-0" type="radio" name="inlineRadioOptions"
+                    id="inlineRadio1" value="option1">
+                </div>
+                <div class="form-check form-check-inline me-3 p-0">
+                  <label class="form-check-label" for="inlineRadio2">女士</label>
+                  <input class="form-check-input float-none ms-0" type="radio" name="inlineRadioOptions"
+                    id="inlineRadio2" value="option2">
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <label for="input2" class="form-label">電話</label>
+            <input type="password" class="form-control" id="input2">
+          </div>
+          <div class="col-lg-6">
+            <label for="inputEmail" class="form-label">電子郵件</label>
+            <input type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="col-lg-6">
+            <label for="q-select" class="form-label">問題類型</label>
+            <select id="q-select" class="form-select">
+              <option selected>餐飲建議</option>
+              <option value="1">建議1</option>
+              <option value="2">建議2</option>
+              <option value="3">建議3</option>
+            </select>
+          </div>
+          <div class="col-lg-12">
+            <label for="exampleFormControlTextarea1" class="form-label">意見需求</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                訂閱泰山莊園最新資訊
+              </label>
+            </div>
+          </div>
+          <div class="col-12 text-center mt-5">
+            <button type="submit" class="btn btn-secondary">送出</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer" class="container-fluid p-0 bg-dark text-white">
+    <div class="row flex-column py-5 m-auto col-xl-8">
+      <div class="col">
+        <div class="row justify-content-around">
+          <div class="col-lg col-5">
+            <img class="rounded-circle" src="https://picsum.photos/200/200/?random=10">
+          </div>
+          <div class="col-lg col-5">
+            <h4>Address</h4>
+            <p>
+              <span>1234 Street Name</span><br>
+              <span>City : AA 99999</span>
+            </p>
+          </div>
+          <div class="col-lg col-5">
+            <h4>Links</h4>
+            <a class="text-white text-decoration-none" href="#">Website builder</a><br>
+            <a class="text-white text-decoration-none" href="#">Download for Windows</a><br>
+            <a class="text-white text-decoration-none" href="#">Download for Mac</a>
+          </div>
+          <div class="col-lg col-5">
+            <h4>Contacts</h4>
+            <p>
+              <span>Email: support@mobirise.com</span><br>
+              <span>Phone: +1 (0) 000 0000 001</span><br>
+              <span>Fax: +1 (0) 000 0000 002</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">© Copyright 2021 Heng Change - All Rights Reserved</div>
+    </div>
   </div>
   <script src="./js/bootstrap.bundle.js"></script>
 </body>
